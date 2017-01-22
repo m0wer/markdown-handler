@@ -8,13 +8,22 @@ header('Content-type: text/html; charset=utf-8');
 	<meta name="content-type" http-equiv="content-type" value="text/html; utf-8">
 </head>
 <body>
+
+<?php
+
+$file = realpath($_SERVER['PATH_TRANSLATED']);
+$filename = basename($file);
+
+?>
+
+<a href="<?= $filename ?>?dl"><?= $filename ?></a> (Source)
+
 <?php
 
 require('markdown.php');
 
 $legalExtensions = array('md');
 
-$file = realpath($_SERVER['PATH_TRANSLATED']);
 if($file
 	&& in_array(strtolower(substr($file,strrpos($file,'.')+1)), $legalExtensions)
 	&& substr($file,0,strlen($_SERVER['DOCUMENT_ROOT'])) == $_SERVER['DOCUMENT_ROOT']) {
