@@ -12,7 +12,7 @@ header('Content-type: text/html; charset=utf-8');
 
 require('markdown.php');
 
-$legalExtensions = array('md', 'markdown');
+$legalExtensions = array('md');
 
 $file = realpath($_SERVER['PATH_TRANSLATED']);
 if($file
