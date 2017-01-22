@@ -1,2 +1,18 @@
+# In order to work, AllowOverride option must be set for this directory in the apache configuration.
+
+Options Indexes
+IndexIgnore markdown
+
 Action markdown /markdown/handler.php
 AddHandler markdown .md
+
+
+# Allow downloads of raw MarkDown source when accessing url/file.md?dl
+
+<FilesMatch "\.md">
+   <If "%{QUERY_STRING} =~ /dl/">
+      AddHandler default-handler .md
+      ForceType application/octet-stream
+      Header set Content-Disposition attachment
+   </If>
+</FilesMatch>
