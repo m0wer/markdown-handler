@@ -32,6 +32,13 @@ pre, code {
 	font-size: 1em;
 }
 
+code {
+	background-color: #444;
+	color: white;
+	padding: 0.5em;
+	border-radius: 0.1em;
+}
+
 h1 {
 	font-size: 45px;
 	font-weight: 100;
