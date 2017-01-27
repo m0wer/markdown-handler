@@ -118,3 +118,6 @@ blockquote:after {
 	}
 }
 
+img {
+		max-width: 100%;
+}
