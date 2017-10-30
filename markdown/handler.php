@@ -6,6 +6,9 @@ header('Content-type: text/html; charset=utf-8');
 <head>
 	<link rel="stylesheet" type="text/css" href="/markdown/style.css">
 	<meta name="content-type" http-equiv="content-type" value="text/html; utf-8">
+	<script type="text/javascript" async
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
 </head>
 <body>
 
